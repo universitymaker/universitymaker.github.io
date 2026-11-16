@@ -239,8 +239,8 @@ ol, ul { padding: 0; list-style: none; }
 .topic-grid.with-fig { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .tcard .rfig { max-width: 32rem; margin-top: .3rem; }
 @media (max-width: 960px) { .topic-grid.with-fig { grid-template-columns: minmax(0, 1fr); } }
-.cols-2 { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 1rem; align-items: start; }
-.cols-2.stretch { align-items: stretch; }
+/* two equal columns with the same gap as the card grids above them, so card edges line up from row to row */
+.cols-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: stretch; }
 .banner + .cols-2 { margin-top: 1rem; }
 .card.prose > h2 { margin-bottom: .75rem; }
 .after { display: flex; flex-direction: column; gap: .85rem; }
